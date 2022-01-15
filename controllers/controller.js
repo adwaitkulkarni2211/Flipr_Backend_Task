@@ -1,4 +1,5 @@
 const axios = require("axios")
+require('dotenv').config();
 
 exports.getLatAndLong = async (req, res) => {
   const result = await Promise.all(
@@ -16,7 +17,7 @@ const apiCall = (location) => {
       .get("https://maps.googleapis.com/maps/api/geocode/json", {
         params: {
           address: location,
-          key: "AIzaSyA5bwbEsAOUMOI4RK2zXcIayG4vjuQSpcw",
+          key: process.env.KEY,
         },
       })
       .then((response) => {

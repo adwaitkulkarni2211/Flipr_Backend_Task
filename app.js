@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
-const axios = require("axios");
 const { getLatAndLong } = require("./controllers/controller");
+require('dotenv').config();
 
+//middleware
 app.use(express.json());
 
+//route
 app.post("/", getLatAndLong);
 
-const port = 3000;
+//server
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
