@@ -3,10 +3,10 @@
 Both the APIs have been deployed on heroku.
 
 ## For Task1: 
-https://stark-shelf-11239.herokuapp.com/api/task1/devices/status
+https://adwait-flipr-assignment.herokuapp.com/api/task1/devices/status
 
 ## For Task2: 
-https://stark-shelf-11239.herokuapp.com/api/task2
+https://adwait-flipr-assignment.herokuapp.com/api/task2
 
 In the body add an array of addresses. eg:
 ```
