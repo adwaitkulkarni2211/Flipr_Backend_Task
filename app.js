@@ -12,6 +12,10 @@ app.use(express.json());
 app.use("/api", task1Route)
 app.use("/api", task2Route);
 
+app.get("/", (req, res) => {
+  res.send("Welcome!")
+})
+
 //server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
